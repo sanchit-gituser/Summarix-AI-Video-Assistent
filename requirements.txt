@@ -1,0 +1,77 @@
+# ─────────────────────────────────────────
+#  UI
+# ─────────────────────────────────────────
+streamlit
+
+# ─────────────────────────────────────────
+#  Transcription  (runs locally on your system)
+# ─────────────────────────────────────────
+faster-whisper          # local Whisper — no API key needed
+ffmpeg-python           # Whisper needs ffmpeg under the hood
+
+# ─────────────────────────────────────────
+#  YouTube download
+# ─────────────────────────────────────────
+yt-dlp                  # download YouTube audio/video (better than pytube)
+
+# ─────────────────────────────────────────
+#  LLM  (Mistral AI free tier)
+# ─────────────────────────────────────────
+mistralai               # official Mistral Python SDK
+
+# ─────────────────────────────────────────
+#  Embeddings  (HuggingFace — free, local)
+# ─────────────────────────────────────────
+sentence-transformers   # HuggingFace embeddings locally (no API key)
+huggingface-hub         # model downloads from HF hub
+
+# ─────────────────────────────────────────
+#  Vector DB
+# ─────────────────────────────────────────
+chromadb                # local vector store, no setup needed
+
+# ─────────────────────────────────────────
+#  LangChain  (RAG pipeline)
+# ─────────────────────────────────────────
+langchain
+langchain-community     # HuggingFace + Chroma integrations live here
+langchain-mistralai     # Mistral LLM wrapper for LangChain
+
+# ─────────────────────────────────────────
+#  Translation  (Hindi → English, free & local)
+# ─────────────────────────────────────────
+deep-translator         # free Google Translate wrapper, no API key needed
+
+# ─────────────────────────────────────────
+#  Language detection  (auto-detect Hindi vs English)
+# ─────────────────────────────────────────
+langdetect
+
+# ─────────────────────────────────────────
+#  PDF / TXT export
+# ─────────────────────────────────────────
+fpdf2                   # generate PDF from summary/mindmap/Q&A output
+reportlab               # alternative PDF generation (more control)
+
+# ─────────────────────────────────────────
+#  Audio / Video file handling
+# ─────────────────────────────────────────
+pydub                   # audio slicing/format conversion
+audioop-lts             #pydub missing  module 
+moviepy                 # extract audio from uploaded MP4/video files
+
+# ─────────────────────────────────────────
+#  Mind Map generation
+# ─────────────────────────────────────────
+networkx                # graph structure for mind map logic
+matplotlib              # render/visualize the mind map
+
+# ─────────────────────────────────────────
+#  Utilities
+# ─────────────────────────────────────────
+python-dotenv           # load API keys from .env file
+tqdm                    # progress bars (nice in Streamlit too)
+numpy
+
+#copy to clipboard
+st-copy-to-clipboard
