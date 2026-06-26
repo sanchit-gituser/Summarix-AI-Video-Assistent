@@ -200,22 +200,64 @@ streamlit run app.py
 
 ---
 
-## ⚠️ Important Note
+## ⚠️ Important Notes
 
-This project uses **free-tier AI models**.
+### 🌐 Live Demo Limitations
 
-The first execution downloads and loads the Whisper model locally, and the AI pipeline performs transcription, summarization, embedding generation, and vector indexing.
+This application is deployed on **Streamlit Community Cloud (Free Tier)**.
 
-⏳ **Please allow approximately 2–5 minutes for processing**, depending on:
+While the complete application works when run locally, the hosted demo has a few limitations due to platform restrictions.
 
-* Video length
-* Internet speed
-* CPU performance
-* Free-tier API response time
+### 1️⃣ YouTube URL Processing
 
-**Please do not close the application while processing.**
+The application supports both:
+
+* 🎥 YouTube URLs
+* 📂 Local Video Uploads
+
+However, **YouTube URL processing may not work in the hosted demo**.
+
+This is **not a limitation of the project itself**. YouTube may block download requests originating from shared cloud servers, resulting in an HTTP 403 (Forbidden) error.
+
+**Recommendation:**
+
+* ✅ Use **Local Video Upload** when testing the live demo.
+* 💻 Run the project locally to use the YouTube URL feature without these cloud restrictions.
+
+---
+
+### 2️⃣ Large Video Files
+
+The application is designed to process long videos by splitting audio into manageable chunks before transcription.
+
+However, the hosted demo runs on **Streamlit Community Cloud's free-tier resources**, which have limitations on CPU, RAM, storage, and execution time.
+
+For the best experience in the live demo:
+
+* ✅ Recommended video length: **up to 30–60 minutes**
+* ✅ Moderate file sizes provide the best performance
+* ⏳ Processing time depends on video duration and server load
+
+When running the project locally, these cloud resource limitations do not apply, allowing significantly larger videos to be processed (subject to your system's hardware capabilities).
+
+---
+
+### ⏳ Processing Time
+
+The first execution may take **2–5 minutes** because the application performs multiple AI tasks:
+
+* Audio extraction
+* Audio chunking
+* Speech-to-text transcription
+* AI summarization
+* Embedding generation
+* Vector database creation
+* RAG initialization
+
+Please wait until processing is complete before refreshing or closing the application.
 
 The sidebar displays the current processing stage in real time.
+
 
 ---
 
