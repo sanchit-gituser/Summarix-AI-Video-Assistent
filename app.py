@@ -444,16 +444,25 @@ source = None
 
 if source_type == "🎥 YouTube URL":
 
-    source = st.text_input(
+    st.info(
+        """
+        ⚠ **Hosted Demo Notice**
 
-        "Paste YouTube URL",
+        Due to YouTube restrictions on cloud-hosted applications,
+        downloading YouTube videos may not work in the live demo.
 
-        placeholder="https://youtube.com/..."
+        ✅ Please use **Local Video Upload** to experience the full application.
 
+        💻 When running the project locally, YouTube URL processing works normally.
+        """
     )
-    if source:
 
-        st.success("YouTube URL Added Successfully")
+    source = st.text_input(
+        "Paste YouTube URL",
+        placeholder="https://youtube.com/..."
+    )
+
+    st.success("YouTube URL Added Successfully")
 
 else:
 
@@ -511,10 +520,17 @@ if analyze:
 
         start_time = time.time()
 
-        result = run_pipeline(
+        try:
+            result = run_pipeline(
             source,
             status_callback=update_status
-        )
+            )
+
+        except Exception as e:
+            progress_bar.progress(0)
+            status_box.error("❌ Processing Failed")
+            st.error(str(e))
+            st.stop()
 
         end_time = time.time()
 

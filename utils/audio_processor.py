@@ -66,8 +66,16 @@ def chunking(input_path :str , chunk_size_in_mins:int=20)->list:
 def  process_input(source :str)->list:
     if source.startswith("http://") or source.startswith("https://"):
         print("\nDetected Youtube URL . Downloading audio...")
-        file_path=download_youtube_audio(source)
-        wav_path=convert_to_wav(file_path)
+        try:
+            file_path = download_youtube_audio(source)
+        except Exception as e:
+            raise RuntimeError(
+                "🚫 YouTube downloads are blocked on the hosted demo due to YouTube restrictions.\n\n"
+                "✅ Please use the Local Video upload option.\n\n"
+                "💻 The YouTube feature works correctly when running the project locally."
+            ) from e
+
+        wav_path = convert_to_wav(file_path)
 
     else:
         print("\nDetected Loacal File . Downloading audio...")
