@@ -66,20 +66,33 @@ AI Chat Interface
 
 ---
 
-## 🖥️ Application Preview
+## 📸 Application Screenshots
 
-> **Add screenshots here after uploading them to GitHub**
+<table>
+<tr>
+<td align="center">
+<b>🏠 Home Page</b><br><br>
+<img src="screenshots/home.png" width="450">
+</td>
 
-Example:
+<td align="center">
+<b>⚡ Live Processing</b><br><br>
+<img src="screenshots/processing.png" width="450">
+</td>
+</tr>
 
-```
-screenshots/
-    home.png
-    processing.png
-    summary.png
-    chat.png
-```
+<tr>
+<td align="center">
+<b>📝 Summary & Insights</b><br><br>
+<img src="screenshots/summary.png" width="450">
+</td>
 
+<td align="center">
+<b>🤖 AI Chat</b><br><br>
+<img src="screenshots/chat.png" width="450">
+</td>
+</tr>
+</table>
 ---
 
 ## 🛠️ Tech Stack
