@@ -5,6 +5,7 @@
 ### **Understand Any Video with AI**
 
 Generate **Transcripts**, **Summaries**, **Action Items**, **Key Decisions**, and **Chat with your Video** using Retrieval-Augmented Generation (RAG).
+> **💡 Note:** The hosted demo is optimized for **Local Video Uploads**. Due to YouTube restrictions on shared cloud environments, YouTube URL processing may not always work in the deployed version.
 
 Built with **Python**, **Streamlit**, **Faster Whisper**, **LangChain**, **ChromaDB**, and **Mistral AI**.
 
