@@ -72,24 +72,24 @@ AI Chat Interface
 <tr>
 <td align="center">
 <b>🏠 Home Page</b><br><br>
-<img src="screenshots/home.png" width="450">
+<img src="screenshots/Home Page.png" width="450">
 </td>
 
 <td align="center">
 <b>⚡ Live Processing</b><br><br>
-<img src="screenshots/processing.png" width="450">
+<img src="screenshots/Live Processing.png" width="450">
 </td>
 </tr>
 
 <tr>
 <td align="center">
 <b>📝 Summary & Insights</b><br><br>
-<img src="screenshots/summary.png" width="450">
+<img src="screenshots/Summary.png" width="450">
 </td>
 
 <td align="center">
 <b>🤖 AI Chat</b><br><br>
-<img src="screenshots/chat.png" width="450">
+<img src="screenshots/Rag Chat.png" width="450">
 </td>
 </tr>
 </table>
