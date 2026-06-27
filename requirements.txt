@@ -25,11 +25,14 @@ langchain-mistralai
 # ==============================
 sentence-transformers
 huggingface-hub
+torch
+torchvision
 
 # ==============================
 # Vector Store
 # ==============================
 chromadb
+protobuf==3.20.3
 
 # ==============================
 # Audio / Video
@@ -43,4 +46,4 @@ audioop-lts
 # Utilities
 # ==============================
 python-dotenv
-numpy
+numpy<2
