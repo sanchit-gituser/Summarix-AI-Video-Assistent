@@ -462,7 +462,16 @@ if source_type == "🎥 YouTube URL":
         placeholder="https://youtube.com/..."
     )
 
-    st.success("YouTube URL Added Successfully")
+    if source.strip():
+
+        if (
+            "youtube.com" in source.lower()
+            or "youtu.be" in source.lower()
+        ):
+            st.success("✅ Valid YouTube URL Added Successfully")
+
+        else:
+            st.warning("⚠ Please enter a valid YouTube URL.")
 
 else:
 
